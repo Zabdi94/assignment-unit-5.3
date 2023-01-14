@@ -46,15 +46,16 @@ function addToCollection (artist, title, yearPublished, tracks)
     // 4. Add a function called findByArtist
     
     function findByArtist (artist) {
-        let results = [];
-        for (title of collection) {
-            if (title.artist === artist) {
-                results.push (title)
-            }
-            
+        let result = [];
+        for (title of collection)
+        if (title.artist === artist) {
+            result.push (title)
         }
-        return results;
+        
+        return result ;
+        
     }
+    
     console.log (findByArtist('Gunna'))
     console.log (findByArtist('Future'))
     console.log (findByArtist('Drake'))
