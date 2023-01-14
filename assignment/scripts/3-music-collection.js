@@ -23,9 +23,9 @@ function addToCollection (artist, title, yearPublished, tracks)
     console.log (addToCollection('Gunna', 'Wunna' ,'2020' ,'Argentina 2:27',))
     console.log (addToCollection('Drake', 'If your reading this its too late','2015','Company 4;12'))
     console.log (addToCollection('Playboi Carti', 'Die lit','2018' ,'Lean4Real 2:45'))
-    console.log (addToCollection('lil baby', 'My turn','2020', 'How 3:45'))
+    console.log (addToCollection('Lil baby', 'My turn','2020', 'How 3:45'))
     console.log (addToCollection('Future', 'Future', '2018','draco 3:43'))
-    console.log (addToCollection('travis scott', 'Astroworld', '2018', 'Yosemite 2:59'))
+    console.log (addToCollection('Travis scott', 'Astroworld', '2018', 'Yosemite 2:59'))
     console.log (collection)
     
     // 3. create a function called "show collections" and test it out
@@ -38,14 +38,26 @@ function addToCollection (artist, title, yearPublished, tracks)
             ${array[i].artist} published in
             ${array[i].yearPublished}
             ${array[i].tracks}`)
-
-             }
-             
+            
+        }
+        
     }
     showCollection (collection)
     // 4. Add a function called findByArtist
-
-    function findByArtist 
-
-
+    
+    function findByArtist (artist) {
+        let results = [];
+        for (title of collection) {
+            if (title.artist === artist) {
+                results.push (title)
+            }
+            
+        }
+        return results;
+    }
+    console.log (findByArtist('Gunna'))
+    console.log (findByArtist('Future'))
+    console.log (findByArtist('Drake'))
+    console.log (findByArtist('Travis scott'))
+    
     
